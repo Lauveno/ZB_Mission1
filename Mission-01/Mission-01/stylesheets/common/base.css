@@ -1,0 +1,18 @@
+/* Base 스타일 작성 */
+body {
+    box-sizing: border-box;
+    width: 1920px;
+    height: 1440px;
+}
+
+/* 기본 글자 크기 및 웸폰트 지정 */
+.title_font {
+    font-size: 24px;
+    font-family: "Noto Sans KR", sans-serif;
+}
+
+.subtitle_font {
+    font-size: 16px;
+    font-family: "Noto Sans KR", sans-serif;
+    color: var(--color-gray-600);
+}

@@ -1,0 +1,275 @@
+/* 카테고리별 추천 광고상품 */
+
+body {
+    /* width: 1920px; */
+    width: 1440px;
+    height: 1440px;
+}
+
+.container {
+    width: 1024px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+/* header */
+
+.header {
+    padding-top: 100px;
+    padding-bottom: 48px;
+    padding-left: 9px;
+}
+
+.hyperlink {
+    display: block;
+    width: 100%;
+}
+
+/* section */
+
+/* headline */
+
+.categoryBestHeadline {
+    margin: 0 0 24px 2px;
+    width: 260px;
+    height: 46px;
+}
+
+.categoryBestHeadline h5 {
+    margin: 0;
+    height: 18px;
+}
+
+.categoryBestHeadline h2 {
+    display: flex;
+    margin: 0;
+}
+
+.categoryBestHeadline h2 p {
+    color: var(--color-blue-600);
+    margin: 0;
+}
+
+/* article */
+
+.categoryBestProduct {
+    position: relative;
+    display: flex;
+    height: 636px;
+    margin-bottom: 24px;
+}
+
+.category_title {
+    position: absolute;
+    margin-top: 48px;
+    margin-left: 24px;
+}
+
+.category_title h2 {
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+.goLink {
+    display: block;
+    margin: 0;
+    width: 71px;
+    background-image: url(../../assets/icon/angle-right-default.svg);
+    background-repeat: no-repeat;
+    background-position: right;
+    color: var(--color-gray-700);
+    font-weight: 700;
+}
+
+.hotkeyword {
+    position: absolute;
+    margin-bottom: 38px;
+    margin-left: 24px;
+    bottom: 0px;
+}
+
+.hotkeyword_title {
+    display: block;
+    margin-bottom: 16px;
+}
+
+.keyword_link {
+    display: flex;
+    flex-direction: column;
+    width: max-content;
+    height: 26px;
+    padding: 10px 6px 10px 6px;
+    font-size: 12px;
+    border: 1px solid var(--color-gray-400);
+    margin-top: 8px;
+    margin-bottom: 8px;
+    justify-content:center;
+    transition: all 0.3s;
+}
+
+.keyword_link:hover {
+    border: none;
+}
+
+.carousel_main {
+    position: relative;
+    display: flex;
+    margin: 1px 0 2px 174px;
+    width: 320px;
+    height: 631px;
+    overflow: hidden;
+    text-align: center;
+}
+
+.carousel_wrap1, .carousel_wrap2 {
+    display: flex;
+    transition: transform 1s;
+    position: relative;
+}
+
+.carousel_img {
+    flex: 0 0 320px;
+    position: relative;
+}
+
+.carousel_img img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.caption {
+    position: absolute;
+    display: block;
+    bottom: 60px;
+    width: 260px;
+    height: 90px;
+    margin-left: 30px;
+    color: var(--color-white);
+    z-index: 2;
+}
+
+.caption .caption_title {
+    display: block;
+    margin-top: 19px;
+    margin-bottom: 9px;
+}
+
+.carousel_indicator {
+    position: absolute;
+    bottom: 24px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+}
+
+.carousel_indicate1, .carousel_indicate2 {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin: 0 4px;
+    cursor: pointer;
+    background-color: var(--color-gray-600);
+}
+
+.carousel_indicate1.active, .carousel_indicate2.active {
+    background-color: var(--color-gray-700);
+}
+
+.product {
+    width: calc(1024px - (320px + 174px));
+    height: 100%;
+    right: 0px;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.product::before {
+    position: absolute;
+    content: '';
+    top: 50%;
+    height: 0.5px;
+    width: 100%;
+    background-color: var(--color-gray-600);
+}
+
+.productImg {
+    width: 160px;
+    height: 300px;
+    margin-top: 9px;
+    padding-bottom: 12px;
+}
+
+.product_info {
+    position: relative;
+    margin: 12px 4px 0 4px;
+}
+
+.product_info span {
+    display: block;
+}
+
+.member_discount {
+    position: static;
+    color: var(--color-red-400);
+    font-size: 14px;
+    font-weight: 500;
+    margin-top: 12px;
+    margin-bottom: -10px;
+}
+
+.price {
+    position: absolute;
+    margin-top: 16px;
+}
+
+/* Houseware */
+
+.HouseWare {
+    border-top: 1px solid var(--color-brown-300);
+    border-bottom: 1px solid var(--color-brown-300);
+}
+
+.HouseWare .category_title h2 {
+    color: var(--color-brown-300);
+}
+
+.HouseWare .keyword_link {
+    color: var(--color-brown-300);
+}
+
+.HouseWare .keyword_link:hover {
+    color: var(--color-white);
+    background-color: var(--color-brown-300);
+}
+
+.HouseWare .caption {
+    background-color: var(--color-brown-300);
+}
+
+/* Kitchenware */
+
+.KitchenWare {
+    border-top: 1px solid var(--color-green-700);
+    border-bottom: 1px solid var(--color-green-700);
+}
+
+.KitchenWare .category_title h2 {
+    color: var(--color-green-700);
+}
+
+.KitchenWare .keyword_link {
+    color: var(--color-green-700);
+}
+
+.KitchenWare .keyword_link:hover {
+    color: var(--color-white);
+    background-color: var(--color-green-700);
+}
+
+.KitchenWare .caption {
+    background-color: var(--color-green-700);
+}

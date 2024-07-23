@@ -1,0 +1,117 @@
+/* CSS 작성 */
+
+.container {
+    width: 1040px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+/* header */
+
+.header {
+    padding-top: 100px;
+    padding-bottom: 48px;
+}
+
+/* section */
+
+/* section_header*/
+
+.discovery {
+    height: 1040px;
+}
+
+.discovery_header {
+    display: flex;
+    position: relative;
+    align-items: center;
+    padding-top: 4px;
+    padding-left: 4px;
+    margin-top: 8px;
+}
+
+.division {
+    padding: 10px 10px;
+}
+
+
+/* section_body */
+
+.discovery_body {
+    padding-top: 24px;
+    overflow: hidden;
+}
+
+ul, .discovery_list li a {
+    display: block;
+}
+
+.item_img {
+    margin: 20px 28px 20px 28px;
+}
+
+.discovery_item {
+    float: left;
+    position: relative;
+    width: calc(502px - (1px*2));
+    margin: 4px 12px 12px 4px;
+    border: 1px solid var(--color-gray-500);
+    z-index: 100;
+}
+
+.item_detail {
+    height: 310px;
+}
+
+li:nth-child(n+3):nth-child(-n+6), :nth-child(n+8) {
+    width: calc(243px - (1px*2));
+}
+
+/* button */
+
+.btn {
+    position: absolute;
+    width: 42px;
+    height: 42px;
+    left: 20px;
+    bottom: 20px;
+    border: 0;
+    background-color: var(--color-gray-500);
+    opacity: 0.7;
+    background-image: url(../../assets/icon/angle-right-square.svg);
+    background-repeat: no-repeat;
+    background-position: right;
+    transition: all 0.3s;
+}
+
+/* hover option */
+
+.discovery_item:hover {
+    border-color: var(--color-blue-600);
+    transition: 0.3s;
+}
+
+.item_detail:focus-visible {
+    outline: 1px solid var(--color-blue-600);
+}
+
+.discovery_item:hover .btn, .item_detail:focus-visible .btn {
+    width: 112px;
+    height: 42px;
+    background-color: var(--color-blue-600);
+    opacity: 1;
+}
+
+.discovery_item:hover .btn:hover::before, .item_detail:focus-visible .btn:hover::before {
+    content: "";
+}
+
+.discovery_item:hover .btn::after, .item_detail:focus-visible .btn::after {
+    content: "구매하기";
+    position: absolute;
+    width: 112px;
+    top: 50%;
+    padding-left: 14px;
+    color: var(--color-white);
+    transform: translate(0, -50%);
+}
